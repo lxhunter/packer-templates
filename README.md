@@ -17,11 +17,11 @@ add Ubuntu boxes for:
 
 Requirements
 ========
-- [packer](http://www.packer.io)
-- [vagrant](http://www.vagrantup.com)
-- [virtualbox](https://www.virtualbox.org)
-- [vmware fusion](http://www.vmware.com/de/products/fusion)
-- [vagrant vmware fusion license](http://www.vagrantup.com/vmware)
+- [packer](http://packer.io)
+- [vagrant](http://vagrantup.com)
+- [virtualbox](https://virtualbox.org)
+- [vmware fusion](http://vmware.com/de/products/fusion)
+- [vagrant vmware fusion license](http://vagrantup.com/vmware)
 
 Packer Install 
 ========
@@ -35,7 +35,7 @@ $ brew install packer
 
 #### All else:
 
-[Packer Setup Instructions](http://www.packer.io/intro/getting-started/setup.html)
+[Packer Setup Instructions](http://packer.io/intro/getting-started/setup.html)
 
 Box Build
 ========
