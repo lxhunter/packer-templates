@@ -5,6 +5,16 @@ Features
 - /var /usr /home /tmp are on separate partitions
 - /home /tmp are mounted with nosuid, nodev and noexec
 
+Todo
+========
+add Ubuntu boxes for:
+- 11.04 Natty Narwhal (maybe)
+- 11.10 Oneiric Ocelot (maybe)
+- 12.04 LTS Precise Pangolin
+- 12.10 Quantal Quetzal
+- 13.04 Raring Ringtail 
+- 13.10 Saucy Salamander
+
 Requirements
 ========
 - packer
