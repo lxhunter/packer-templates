@@ -17,9 +17,11 @@ add Ubuntu boxes for:
 
 Requirements
 ========
-- packer
-- vagrant
-- virtualbox or/and vmware fusion 
+- [packer](http://www.packer.io)
+- [vagrant](http://www.vagrantup.com)
+- [virtualbox](https://www.virtualbox.org)
+- [vmware fusion](http://www.vmware.com/de/products/fusion)
+- [vagrant vmware fusion license](http://www.vagrantup.com/vmware)
 
 Packer Install 
 ========
