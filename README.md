@@ -1,0 +1,1 @@
+packer build -only=virtualbox-iso debian-squeeze-6.0.9-amd64-netinst.json

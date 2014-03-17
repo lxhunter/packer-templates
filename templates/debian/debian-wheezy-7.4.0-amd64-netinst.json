@@ -1,0 +1,100 @@
+{
+    "variables": {
+        "provisioner": "provisionerless",
+        "provisioner_version": "",
+        "iso_url": "http://cdimage.debian.org/debian-cd/7.4.0/amd64/iso-cd/debian-7.4.0-amd64-netinst.iso",
+        "iso_checksum": "015b0eadeac8e5fb18c74f62d1cc06fb2fbe3eb5",
+        "iso_checksum_type": "sha1",
+        "preseed": "debian-wheezy-preseed.cfg",
+        "domain": "vagrantup.com",
+        "ssh_username": "vagrant",
+        "ssh_password": "vagrant",
+        "vm_name": "debian-wheezy-amd64-netinst",
+        "box_name": "debian-wheezy-7.4.0-amd64-netinst"
+    },
+    "builders": [{
+        "vm_name": "{{user `vm_name`}}",
+        "type": "vmware-iso",
+        "guest_os_type": "debian7-64",
+        "http_directory": "http",
+        "iso_url": "{{user `iso_url`}}",
+        "iso_checksum": "{{user `iso_checksum`}}",
+        "iso_checksum_type": "{{user `iso_checksum_type`}}",
+        "ssh_username": "{{ user `ssh_username` }}",
+        "ssh_password": "{{ user `ssh_password` }}",
+        "ssh_wait_timeout": "10000s",
+        "tools_upload_flavor": "linux",
+        "boot_command": [
+            "<esc><wait>",
+            "install",
+            " auto",
+            " url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/{{ user `preseed` }}",
+            " debian-installer=en_US",
+            " locale=en_US",
+            " keymap=us",
+            " netcfg/get_hostname={{ .Name }}",
+            " netcfg/get_domain={{ user `domain` }} ",
+            "<enter>"
+        ],
+        "shutdown_command": "echo 'vagrant'|sudo -S shutdown -h now",
+        "disk_size": 10140,
+        "vmx_data": {
+            "memsize": "512",
+            "numvcpus": "1",
+            "cpuid.coresPerSocket": "1"
+        }
+    },
+        {
+            "vm_name": "{{user `vm_name`}}",
+            "type": "virtualbox-iso",
+            "http_directory": "http",
+            "iso_url": "{{user `iso_url`}}",
+            "iso_checksum": "{{user `iso_checksum`}}",
+            "iso_checksum_type": "{{user `iso_checksum_type`}}",
+            "guest_os_type": "Debian_64",
+            "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+            "virtualbox_version_file": ".vbox_version",
+            "ssh_username": "{{ user `ssh_username` }}",
+            "ssh_password": "{{ user `ssh_password` }}",
+            "ssh_wait_timeout": "10000s",
+            "boot_command": [
+                "<esc><wait>",
+                "install",
+                " auto",
+                " url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/{{ user `preseed` }}",
+                " debian-installer=en_US",
+                " locale=en_US",
+                " keymap=us",
+                " netcfg/get_hostname={{ .Name }}",
+                " netcfg/get_domain={{ user `domain` }} ",
+                "<enter>"
+            ],
+            "shutdown_command": "echo 'vagrant'|sudo -S shutdown -h now",
+            "disk_size": 10140,
+            "vboxmanage": [
+                ["modifyvm", "{{.Name}}", "--memory", "512"],
+                ["modifyvm", "{{.Name}}", "--cpus", "1"]
+            ]
+        }],
+    "provisioners": [{
+        "type": "shell",
+        "environment_vars": [
+            "PROVISIONER={{user `provisioner`}}",
+            "PROVISIONER_VERSION={{user `provisioner_version`}}"
+        ],
+        "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+        "scripts": [
+            "script/base.sh",
+            "script/vagrant.sh",
+            "script/vmtools.sh",
+            "script/provisioner.sh",
+            "script/cleanup.sh",
+            "script/zerodisk.sh"
+        ]
+    }],
+    "post-processors": [{
+        "type": "vagrant",
+        "keep_input_artifact": false,
+        "output": "../../{{.Provider}}/{{user `box_name`}}-{{user `provisioner`}}{{user `provisioner_version`}}.box"
+    }]
+}
