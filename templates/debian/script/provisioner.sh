@@ -39,6 +39,10 @@ case "${PROVISIONER}" in
     fi
     ;;
 
+  'ansible')
+      apt-get install -y python-simplejson python-apt python-pycurl
+    ;;
+
   *)
     echo "Building box without a provisioner"
     ;;
