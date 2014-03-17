@@ -5,11 +5,23 @@ Features
 - /var /usr /home /tmp are on separate partitions
 - /home /tmp are mounted with nosuid, nodev and noexec
 
+Todo
+========
+add Ubuntu boxes for:
+- 11.04 Natty Narwhal (maybe)
+- 11.10 Oneiric Ocelot (maybe)
+- 12.04 LTS Precise Pangolin
+- 12.10 Quantal Quetzal
+- 13.04 Raring Ringtail 
+- 13.10 Saucy Salamander
+
 Requirements
 ========
-- packer
-- vagrant
-- virtualbox or/and vmware fusion 
+- [packer](http://packer.io)
+- [vagrant](http://vagrantup.com)
+- [virtualbox](https://virtualbox.org)
+- [vmware fusion](http://vmware.com/de/products/fusion)
+- [vagrant vmware fusion license](http://vagrantup.com/vmware)
 
 Packer Install 
 ========
@@ -23,7 +35,7 @@ $ brew install packer
 
 #### All else:
 
-[Packer Setup Instructions](http://www.packer.io/intro/getting-started/setup.html)
+[Packer Setup Instructions](http://packer.io/intro/getting-started/setup.html)
 
 Box Build
 ========
