@@ -1,9 +1,13 @@
 Features
 ========
-- Debian boxes from lenny till wheezy
 - UTC set
 - /var /usr /home /tmp are on separate partitions
 - /home /tmp are mounted with nosuid, nodev and noexec
+
+##### Debian Boxes
+- ![lenny](https://raw.github.com/lxhunter/packer-templates/master/deco/lenny.png "Lenny") Lenny
+- ![squeeze](https://raw.github.com/lxhunter/packer-templates/master/deco/squeeze.png "Squeeze") Squeeze
+- ![wheezy](https://raw.github.com/lxhunter/packer-templates/master/deco/wheezy.png "Wheezy") Wheezy
 
 Todo
 ========
