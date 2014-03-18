@@ -5,9 +5,9 @@ Features
 - /home /tmp are mounted with nosuid, nodev and noexec
 
 ##### Debian Boxes
-- ![lenny](https://raw.github.com/lxhunter/packer-templates/master/deco/lenny.png "Lenny") Lenny
-- ![squeeze](https://raw.github.com/lxhunter/packer-templates/master/deco/squeeze.png "Squeeze") Squeeze
-- ![wheezy](https://raw.github.com/lxhunter/packer-templates/master/deco/wheezy.png "Wheezy") Wheezy
+- ![lenny](https://raw.github.com/lxhunter/packer-templates/master/deco/lenny.png "Lenny") **Lenny**
+- ![squeeze](https://raw.github.com/lxhunter/packer-templates/master/deco/squeeze.png "Squeeze") **Squeeze**
+- ![wheezy](https://raw.github.com/lxhunter/packer-templates/master/deco/wheezy.png "Wheezy") **Wheezy**
 
 Todo
 ========
