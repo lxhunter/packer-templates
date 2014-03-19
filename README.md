@@ -9,15 +9,15 @@ Features
 - ![squeeze](https://raw.github.com/lxhunter/packer-templates/master/deco/squeeze.png "Squeeze") **Squeeze 6.0.9**
 - ![wheezy](https://raw.github.com/lxhunter/packer-templates/master/deco/wheezy.png "Wheezy") **Wheezy 7.4.0**
 - **12.04 Precise Pangolin**
-- **12.10 Quantal Quetzal**
 - **13.04 Raring Ringtail**
+- **13.10 Saucy Salamander**
 
 Todo
 ========
 add Ubuntu boxes for:
 - 11.04 Natty Narwhal (maybe)
 - 11.10 Oneiric Ocelot (maybe)
-- 13.10 Saucy Salamander
+- 12.10 Quantal Quetzal
 
 Requirements
 ========
