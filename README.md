@@ -4,19 +4,19 @@ Features
 - /var /usr /home /tmp are on separate partitions
 - /home /tmp are mounted with nosuid, nodev and noexec
 
-##### Debian Boxes
+##### Boxes
 - ![lenny](https://raw.github.com/lxhunter/packer-templates/master/deco/lenny.png "Lenny") **Lenny 5.0.10**
 - ![squeeze](https://raw.github.com/lxhunter/packer-templates/master/deco/squeeze.png "Squeeze") **Squeeze 6.0.9**
 - ![wheezy](https://raw.github.com/lxhunter/packer-templates/master/deco/wheezy.png "Wheezy") **Wheezy 7.4.0**
+- 12.04 Precise Pangolin
+- 12.10 Quantal Quetzal
+- 13.04 Raring Ringtail
 
 Todo
 ========
 add Ubuntu boxes for:
 - 11.04 Natty Narwhal (maybe)
 - 11.10 Oneiric Ocelot (maybe)
-- 12.04 LTS Precise Pangolin
-- 12.10 Quantal Quetzal
-- 13.04 Raring Ringtail 
 - 13.10 Saucy Salamander
 
 Requirements
