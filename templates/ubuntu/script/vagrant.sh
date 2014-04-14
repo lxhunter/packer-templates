@@ -7,7 +7,7 @@ VAGRANT_KEY_URL=https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub
 # Create Vagrant user (if not already present)
 if ! id -u $VAGRANT_USER >/dev/null 2>&1; then
     /usr/sbin/groupadd $VAGRANT_USER
-    /usr/sbin/useradd $VAGRANT_USER -g $VAGRANT_USER -G sudo -d $VAGRANT_HOME --create-home
+    /usr/sbin/useradd $VAGRANT_USER -s /bin/bash -g $VAGRANT_USER -G sudo -d $VAGRANT_HOME --create-home
     echo "${VAGRANT_USER}:${VAGRANT_USER}" | chpasswd
 fi
 
