@@ -11,12 +11,11 @@ Features
 - **12.04 Precise Pangolin**
 - **13.04 Raring Ringtail**
 - **13.10 Saucy Salamander**
+- **14.10 Utopic Unicorn**
 
 Todo
 ========
 add Ubuntu boxes for:
-- 11.04 Natty Narwhal (maybe)
-- 11.10 Oneiric Ocelot (maybe)
 - 12.10 Quantal Quetzal
 
 Requirements
