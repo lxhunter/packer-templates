@@ -6,7 +6,7 @@ Features
 
 ##### Boxes
 - ![lenny](https://raw.github.com/lxhunter/packer-templates/master/deco/lenny.png "Lenny") **Lenny 5.0.10**
-- ![squeeze](https://raw.github.com/lxhunter/packer-templates/master/deco/squeeze.png "Squeeze") **Squeeze 6.0.9**
+- ![squeeze](https://raw.github.com/lxhunter/packer-templates/master/deco/squeeze.png "Squeeze") **Squeeze 6.0.10**
 - ![wheezy](https://raw.github.com/lxhunter/packer-templates/master/deco/wheezy.png "Wheezy") **Wheezy 7.4.0**
 - **12.04 Precise Pangolin**
 - **13.04 Raring Ringtail**

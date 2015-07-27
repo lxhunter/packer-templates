@@ -2,15 +2,15 @@
     "variables": {
         "provisioner": "provisionerless",
         "provisioner_version": "",
-        "iso_url": "http://cdimage.debian.org/cdimage/archive/6.0.9/amd64/iso-cd/debian-6.0.9-amd64-netinst.iso",
-        "iso_checksum": "785dd81f64fefcfa7a5cab36c00a9cadd80393e2",
+        "iso_url": "http://cdimage.debian.org/cdimage/archive/6.0.10/i386/iso-cd/debian-6.0.10-i386-netinst.iso",
+        "iso_checksum": "9a49eaffc2483b5ff1deb8844cb48c2afdda19d6",
         "iso_checksum_type": "sha1",
         "preseed": "debian-squeeze-preseed.cfg",
         "domain": "vagrantup.com",
         "ssh_username": "vagrant",
         "ssh_password": "vagrant",
         "vm_name": "debian-squeeze-amd64-netinst",
-        "box_name": "debian-squeeze-6.0.9-amd64-netinst"
+        "box_name": "debian-squeeze-6.0.10-amd64-netinst"
     },
     "builders": [
         {
